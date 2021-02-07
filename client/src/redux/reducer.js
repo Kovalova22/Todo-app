@@ -1,8 +1,7 @@
 import * as ActionTypes from "./ActionTypes";
 
 const initialState = {
-  todos: [],
-  todo: {}
+  todos: []
 };
 
 export default function reducer(state = initialState, action) {
