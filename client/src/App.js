@@ -9,8 +9,10 @@ function App() {
     <div className="App">
       <header>
         <TodoInput />
-        <ListTodos />
       </header>
+      <div>
+      <ListTodos />
+      </div>
     </div>
   );
 }
