@@ -10,9 +10,7 @@ function App() {
       <header>
         <TodoInput />
       </header>
-      <div>
       <ListTodos />
-      </div>
     </div>
   );
 }

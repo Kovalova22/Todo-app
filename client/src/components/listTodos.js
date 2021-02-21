@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Todo from './todo';
 import { fetchTodos, deleteTodo } from '../redux/actions';
 import '../App.css';
 import { connect } from 'react-redux';
+import { ListGroup, ListGroupItem } from 'reactstrap';
 
 const mapStateToProps = state => ({
     todos: state.reducer.todos
@@ -17,13 +17,13 @@ class ListTodos extends Component{
     }
     render() {
         return (
-            <div className='list-todos'>
+            <div className='App'>
                 {this.props.todos.map((todo) => (
-                    <div className='todo' key={todo.id}>
-                         <Todo key={todo.id} todo={todo} />
-                         <button type= 'button'
-                         onClick={() => this.onDelete(todo.id)}>Delete</button>
-                    </div>
+                    <ListGroup className='todo' key={todo.id}>
+                         <ListGroupItem className='column'>{todo.title}</ListGroupItem>
+                         <ListGroupItem className='column'><button type= 'button'
+                         onClick={() => this.onDelete(todo.id)}>Delete</button></ListGroupItem>
+                    </ListGroup>
                 ))}
             </div>
         );
