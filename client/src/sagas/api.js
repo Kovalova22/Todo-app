@@ -1,12 +1,12 @@
-import axios from "axios";
+import axios from 'axios';
 
 export const fetchTodos = () => {
   return axios.request({
-    method: "get",
+    method: 'get',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
 
-    url: "http://localhost:3000/api/todos",
+    url: 'http://localhost:3000/api/todos',
   });
 };

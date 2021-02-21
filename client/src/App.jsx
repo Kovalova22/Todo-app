@@ -1,7 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import './App.css';
 import TodoInput from './components/input';
-import { connect } from 'react-redux';
 import ListTodos from './components/listTodos';
 
 function App() {
