@@ -4,6 +4,10 @@ import { addTodo } from '../redux/actions'
 import { connect } from 'react-redux';
 
 class TodoInput extends Component {
+    refreshPage() {
+        window.location.reload(false);
+    }
+
     handleSubmit = (e) => {
         e.preventDefault();
         const title = this.getTitle.value;
@@ -11,6 +15,7 @@ class TodoInput extends Component {
         const todo = {title: title};
         this.props.addTodo(todo);
         this.getTitle.value = '';
+        this.refreshPage();
     }
 
     render() {

@@ -23,7 +23,6 @@ class ListTodos extends Component{
                          <Todo key={todo.id} todo={todo} />
                          <button type= 'button'
                          onClick={() => this.onDelete(todo.id)}>Delete</button>
-                        <input type='checkbox'/>
                     </div>
                 ))}
             </div>
